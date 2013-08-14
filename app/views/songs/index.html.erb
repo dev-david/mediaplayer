@@ -1,0 +1,34 @@
+<div class="row-fluid">
+  <div class="span4 center">
+    <h2><i class='songicon icon-music icon-3x'></i> Music Box<h2><br>
+    <%= render 'jplayer' %>
+    <br>
+    <%= link_to 'New Song', new_song_path, class: "btn btn-large" %>
+  </div>
+  <div class="span7">
+    <h1>Songs</h1>
+
+    <table class="table">
+      <tr>
+        <th>Title</th>
+        <th>Artist</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @songs.each do |song| %>
+      <tr>
+        <td><%= song.title %></td>
+        <td><%= song.artist %></td>
+        <td><%= link_to raw("<i class='songicon icon-play'></i> Play Song"), song.mediafile.url, :class => "play btn btn-primary", :alt => song.title %></td>
+        <td><%= link_to raw("<i class='songicon icon-info-sign'></i> Show"), song, class: "btn btn-info" %></td>
+        <td><%= link_to raw("<i class='songicon icon-edit'></i> Edit"), edit_song_path(song), class: "btn" %></td>
+        <td><%= link_to raw("<i class='songicon icon-trash'></i> Destroy"), song, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+    </table>
+    <br />
+  </div>
+</div>
