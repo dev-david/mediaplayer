@@ -1,15 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="row-fluid">
+	<div class="span7 maincontent">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @song.title %>
-</p>
+		<p>
+		  <b>Title:</b>
+		  <%= @song.title %>
+		</p>
 
-<p>
-  <b>Artist:</b>
-  <%= @song.artist %>
-</p>
+		<p>
+		  <b>Artist:</b>
+		  <%= @song.artist %>
+		</p>
 
+		<p>
+			<b>Uploaded:</b> <%= time_ago_in_words(@song.created_at) %> ago
+		</p>
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+		<p>
+			<b>Size:</b> <%= number_to_human_size(@song.mediafile_file_size) %>
+		</p>
+
+		<%= link_to 'Edit', edit_song_path(@song), class: "btn btn-info" %> |
+		<%= link_to 'Back', songs_path, class: "btn" %>
+	</div>
+</div>

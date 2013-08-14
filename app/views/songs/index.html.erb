@@ -1,17 +1,18 @@
 <div class="row-fluid">
-  <div class="span4 center">
+  <div class="span4 center sidebar">
     <h2><i class='songicon icon-music icon-3x'></i> Music Box<h2><br>
     <%= render 'jplayer' %>
     <br>
     <%= link_to 'New Song', new_song_path, class: "btn btn-large" %>
   </div>
-  <div class="span7">
-    <h1>Songs</h1>
+  <div class="span7 maincontent">
+    <h1 class="center">Songs</h1>
 
-    <table class="table">
+    <table class="table table-hover">
       <tr>
         <th>Title</th>
         <th>Artist</th>
+        <th>Size</th>
         <th></th>
         <th></th>
         <th></th>
@@ -22,6 +23,7 @@
       <tr>
         <td><%= song.title %></td>
         <td><%= song.artist %></td>
+        <td><%= number_to_human_size(song.mediafile_file_size) %></td>
         <td><%= link_to raw("<i class='songicon icon-play'></i> Play Song"), song.mediafile.url, :class => "play btn btn-primary", :alt => song.title %></td>
         <td><%= link_to raw("<i class='songicon icon-info-sign'></i> Show"), song, class: "btn btn-info" %></td>
         <td><%= link_to raw("<i class='songicon icon-edit'></i> Edit"), edit_song_path(song), class: "btn" %></td>
