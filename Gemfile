@@ -10,6 +10,7 @@ gem "flat-ui-rails"
 gem 'hirb'
 gem 'paperclip'
 gem "font-awesome-rails"
+gem 'aws-sdk', '~> 1.5.7'
 
 
 group :development, :test do
