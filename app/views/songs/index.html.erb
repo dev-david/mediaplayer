@@ -27,7 +27,7 @@
         <td><%= link_to raw("<i class='songicon icon-play'></i> Play Song"), song.mediafile.url, :class => "play btn btn-primary", :alt => song.title %></td>
         <td><%= link_to raw("<i class='songicon icon-info-sign'></i> Show"), song, class: "btn btn-info" %></td>
         <td><%= link_to raw("<i class='songicon icon-edit'></i> Edit"), edit_song_path(song), class: "btn" %></td>
-        <td><%= link_to raw("<i class='songicon icon-trash'></i> Destroy"), song, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <td><%= link_to raw("<i class='songicon icon-trash'></i> Destroy"), song, method: :delete, data: { confirm: 'Are you sure you want to delete ' + song.title + '?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
     </table>
