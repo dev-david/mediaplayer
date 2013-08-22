@@ -2,8 +2,20 @@
 @import 'bootstrap-responsive';
 @import "flat-ui";
 
+body, html {
+	/*background-color: #2D2D2D;*/
+	background: url('/images/musicbg.jpg');
+	/*background-size: contain;*/
+	height: 100%;
+}
+
 .center {
 	text-align: center;
+}
+
+.david_container {
+	background-color: #2D2D2D;
+	opacity: 0.9;
 }
 
 .jplayer {
@@ -22,6 +34,8 @@
 .maincontent {
 	background-color: #5dcec6;
 	padding: 5px;
+	height: 100%;
+	opacity: 0.9;
 }
 
 .rightbar {
