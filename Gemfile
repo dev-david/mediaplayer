@@ -11,6 +11,7 @@ gem 'hirb'
 gem 'paperclip'
 gem "font-awesome-rails"
 gem 'aws-sdk', '~> 1.5.7'
+gem 'newrelic_rpm'
 
 
 group :development, :test do
