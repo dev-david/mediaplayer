@@ -3,33 +3,48 @@
 @import "flat-ui";
 
 body, html {
-	/*background-color: #2D2D2D;*/
-	background: url('/images/boombox.jpg') no-repeat;
-	background-size: contain;
+	background-color: #2D2D2D;
+	/*background: url('/images/boombox.jpg') no-repeat;*/
+	/*background-size: contain;*/
 	height: 100%;
+}
+
+body {
+	padding-top: 109px;
+	background: url('/images/musicbg.jpg') no-repeat;
+	background-size: cover;
+}
+
+.brand {
+	margin-left: auto; margin-right: auto;
 }
 
 .center {
 	text-align: center;
 }
 
+.clear {
+	clear: both;
+}
+
 .david_container {
-	/*background-color: #2D2D2D;*/
+	background-color: #2D2D2D;
 	/*opacity: 0.8;*/
 }
 
 .jplayer {
 	margin: 0px auto;
+	display: inline-block;
 }
 
-.leftbar {
+.mainbar {
 	/*background-color: #6b8fd4;*/
-	/*background-color: #2D2D2D;*/
-	/*color: #C0C0C0;*/
-	color: #2980b9;
+	background-color: #2D2D2D;
+	color: #C0C0C0;
+	/*color: #2980b9;*/
 	padding: 5px;
-	overflow: auto;
-	min-height: 100%
+	/*overflow: auto;*/
+	/*min-height: 100%*/
 }
 
 .maincontent {
@@ -38,6 +53,12 @@ body, html {
 	height: 100%;
 	overflow: auto;
 	/*opacity: 0.9;*/
+}
+
+.middle {
+	width: 300px;
+	margin: 0px auto;
+	font-size: 2em;
 }
 
 .rightbar {
