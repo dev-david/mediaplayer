@@ -4,8 +4,8 @@
 
 body, html {
 	/*background-color: #2D2D2D;*/
-	background: url('/images/musicbg.jpg');
-	/*background-size: contain;*/
+	background: url('/images/musicbg.jpg') no-repeat;
+	background-size: cover;
 	height: 100%;
 }
 
